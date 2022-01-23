@@ -64,6 +64,7 @@ while (keepPlaying == True):
         else: #User selected either rock, paper, or scissors
             computerDecision = getComputerDecision()
             winner = determineWinner(playerDecision.upper(),computerDecision.upper())
+            #Display what the picks were for both user and computer and calcualte score
             print("You picked " + playerDecision + " and the computer picked " + computerDecision)
             if (winner == "Tie"):
                 print("The result is a tie, score unchanged. Player - ", str(playerScore), "and Computer - ",str(computerScore))
@@ -75,6 +76,7 @@ while (keepPlaying == True):
                 computerScore+=1
                 print(computerDecision + " beats " + playerDecision + "!")
                 print("Computer wins! Player - ", str(playerScore), "and Computer - ",str(computerScore))
+            #Show overall score and tell player if they are ahead or behind
             if (playerScore > computerScore):
                 print("Player is ahead by ", str(playerScore-computerScore), " point(s)")
             elif (playerScore < computerScore):
