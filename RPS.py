@@ -75,6 +75,12 @@ while (keepPlaying == True):
                 computerScore+=1
                 print(computerDecision + " beats " + playerDecision + "!")
                 print("Computer wins! Player - ", str(playerScore), "and Computer - ",str(computerScore))
+            if (playerScore > computerScore):
+                print("Player is ahead by ", str(playerScore-computerScore), " point(s)")
+            elif (playerScore < computerScore):
+                print("Player is behind by ", str(computerScore-playerScore), " point(s)")
+            else:
+                print("Score is currently tied between player and computer")
     else:
         print("You have entered an invalid selection, please try again")
     
